@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media / galerij</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <ul>
+        <li class="dropdown"><a href="index.html" class="dropbtn">HOME</a></li>
+        <li class="dropdown"><a href="media.html" class="dropbtn">Mediapagina/galerij</a></li>
+        <li class="dropdown"><a href="faq.html" class="dropbtn">FAQ</a></li>
+    </ul>
+</header>
+
+
+<section class="media-section">
+    <h1>Galerij</h1>
+    <p>Bekijk hier afbeeldingen van het mediaproduct.</p>
+
+    <div class="gallery">
+
+        <figure class="gallery-item">
+            <img src="img/silksong_img1.png" alt="Silksong scene 1" data-title="Silksong scene 1">
+            <figcaption>Silksong scene 1</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="img/silksong_img2.png" alt="Silksong scene 2" data-title="Silksong scene 2">
+            <figcaption>Silksong scene 2</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="img/silksong_img3.png" alt="Silksong scene 3" data-title="Silksong scene 3">
+            <figcaption>Silksong scene 3</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="img/silksong_img4.png" alt="Silksong scene 4" data-title="Silksong scene 4">
+            <figcaption>Silksong scene 4</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="img/silksong_img5.png" alt="Silksong scene 5" data-title="Silksong scene 5">
+            <figcaption>Silksong scene 5</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="img/bestaat_niet.png" alt="Onbekende afbeelding" data-title="Onbekende afbeelding">
+            <figcaption>Onbekende afbeelding</figcaption>
+        </figure>
+    </div>
+</section>
+<div id="image-modal" class="image-modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modal-image">
+    <p id="modal-caption"></p>
+</div>
+
+<script src="app.js"></script>    
+</body>
+</html>
