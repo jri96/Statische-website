@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <ul class="navbar">
+    <li><a href="home.html">HOME</a></li>
+    <li><a href="Media.html">Mediapagina/galerij</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="info.html">Informatie pagina</a></li>
+    <li><a href="demo.html">Videomateriaal</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
+    <li><a href="uitgebreid-info.html">Uitgebreide info</a></li>
+  </ul>
+</header>
+
+<main id="feedback-page" class="page">
+  <section class="card">
+    <h1>Feedback krijgen</h1>
+    <p class="muted">
+      Op deze pagina zie je zowel sterke punten als verbeterpunten.
+      Je kunt ook reageren op de feedback indien nodig.
+    </p>
+
+    <!-- SUCCESS -->
+    <div id="feedback-ok">
+      <div class="feedback-grid">
+        <div class="card" style="background:#141414;">
+          <h2 style="margin-top:0;">Sterke punten</h2>
+          <ul class="feedback-list">
+            <li>Duidelijke navigatie en consistente opmaak.</li>
+            <li>Responsieve layout op verschillende schermgroottes.</li>
+            <li>Overzichtelijke structuur in HTML/CSS.</li>
+          </ul>
+        </div>
+
+        <div class="card" style="background:#141414;">
+          <h2 style="margin-top:0;">Verbeterpunten</h2>
+          <ul class="feedback-list">
+            <li>Meer foutafhandeling en gebruikersfeedback toevoegen.</li>
+            <li>Code opschonen en herhaling verminderen.</li>
+            <li>Toegankelijkheid verbeteren (labels/contrast).</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 style="margin-top:18px;">Reageren op feedback</h2>
+      <form id="reply-form" class="reply-box">
+        <label for="reply" class="muted">Jouw reactie</label>
+        <textarea id="reply" placeholder="Schrijf hier je reactie..."></textarea>
+        <button type="submit">Versturen</button>
+        <p id="reply-msg" class="success-msg">Reactie verzonden. Bedankt!</p>
+      </form>
+    </div>
+
+    <!-- ERROR -->
+    <div id="feedback-fail" class="error-box" style="display:none;">
+      <strong>De feedback kan momenteel niet worden geladen. Probeer het later opnieuw.</strong>
+    </div>
+
+    <h2>Jouw laatste reactie</h2>
+    <p id="saved-reply" class="muted"></p>
+  </section>
+</main>
+
+
+<script src="app.js"></script>
+</body>
+</html>

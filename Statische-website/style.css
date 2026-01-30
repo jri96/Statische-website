@@ -1,0 +1,616 @@
+/* =========================
+   GLOBAL
+========================= */
+body {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding-top: 70px; /* hoogte van je fixed navbar */
+}
+
+/* =========================
+   NAVBAR (ONLY)
+   - 
+========================= */
+.navbar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: #333;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar > li {
+  position: relative;
+}
+
+.navbar a,
+.navbar .dropbtn {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover,
+.navbar .dropdown:hover .dropbtn {
+  background-color: #111;
+}
+
+/* Dropdown */
+.navbar .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background-color: #04AA6D;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 99999;
+}
+
+.navbar .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.navbar .dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.navbar .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* =========================
+   HERO (video banner)
+========================= */
+.hero {
+  position: relative;
+  height: 70vh;
+  min-height: 420px;
+  overflow: hidden;
+  background: black;
+}
+
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 60px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white;
+}
+
+.hero__content h1 {
+  font-size: clamp(32px, 5vw, 72px);
+  margin: 0 0 10px 0;
+}
+
+.hero__content p {
+  font-size: clamp(16px, 2vw, 28px);
+  margin: 0;
+  opacity: 0.9;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__video {
+    display: none;
+  }
+  .hero {
+    background: url("") center/cover no-repeat;
+  }
+}
+
+/* optional */
+.site-nav {
+  position: relative;
+  z-index: 3;
+}
+
+/* =========================
+   FEATURE SECTIONS
+========================= */
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+.feature__media {
+  flex: 1;
+}
+
+.feature__media img {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  display: block;
+}
+
+.feature__text {
+  flex: 1;
+  max-width: 520px;
+}
+
+.feature--reverse {
+  flex-direction: row-reverse;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .feature {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .feature__media img {
+    max-width: 100%;
+  }
+
+  .feature__text {
+    max-width: 100%;
+  }
+
+  .feature--reverse {
+    flex-direction: column;
+  }
+}
+
+/* =========================
+   FAQ
+========================= */
+.faq-section {
+  max-width: 900px;
+  margin: 100px auto 40px;
+  padding: 20px;
+  background-color: #111;
+  border-radius: 8px;
+}
+
+.faq-section h1,
+.faq-section h2 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+.faq-list details {
+  background-color: #222;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.faq-list summary {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.faq-list p {
+  margin-top: 8px;
+}
+
+.faq-form {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #555;
+  background-color: #000;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.faq-form button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  background-color: #04AA6D;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.faq-form button:hover {
+  background-color: #038757;
+}
+
+.form-bericht {
+  margin-top: 10px;
+  color: #04AA6D;
+  font-weight: bold;
+}
+
+/* =========================
+   MEDIA / GALLERY
+========================= */
+.media-section {
+  max-width: 1000px;
+  margin: 100px auto 40px;
+  padding: 20px;
+}
+
+.media-section h1 {
+  margin-top: 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-item {
+  background-color: #111;
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 10px; /* ruimte voor knop */
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+}
+
+.gallery-item figcaption {
+  padding: 8px 10px;
+  font-size: 0.9rem;
+}
+
+/* Modal */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.image-modal .modal-content {
+  display: block;
+  max-width: 80%;
+  max-height: 80vh;
+  margin: 60px auto 10px;
+}
+
+#modal-caption {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.modal-close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Trailer */
+.trailer {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.trailer-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.trailer-container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  display: block;
+}
+
+/* =========================
+   DOWNLOAD BUTTONS
+========================= */
+.download-one {
+  margin: 8px auto 0;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: #04AA6D;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.download-one:hover {
+  background-color: #038757;
+}
+
+.download-bar {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#download-all {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  background-color: #04AA6D;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#download-all:hover {
+  background-color: #038757;
+}
+
+.download-msg {
+  margin: 0;
+  font-weight: bold;
+  color: #04AA6D;
+}
+
+/* =========================
+   INFO PAGE
+========================= */
+.info-page {
+  max-width: 1000px;
+  margin: 100px auto 40px;
+  padding: 20px;
+}
+
+.info-section {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: #111;
+  border-radius: 12px;
+}
+
+/* IMPORTANT: this UL is a normal list, NOT navbar */
+.info-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 10px 0 20px;
+}
+
+.team-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.team-card {
+  background: #222;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+/* ===== Sprint 3 shared layout ===== */
+.page {
+  max-width: 1100px;
+  margin: 110px auto 40px;
+  padding: 20px;
+}
+
+.card {
+  background: #111;
+  border-radius: 12px;
+  padding: 26px;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.page h1 {
+  margin: 0 0 12px 0;
+  font-size: clamp(28px, 4vw, 44px);
+}
+
+.muted {
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+.notice {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  background: rgba(255, 196, 0, 0.08);
+  border: 1px solid rgba(255, 196, 0, 0.25);
+}
+
+.error-box {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 10px;
+  background: rgba(255,0,0,0.08);
+  border: 1px solid rgba(255,0,0,0.25);
+}
+
+/* ===== Video page ===== */
+.video-wrap {
+  width: 100%;
+  max-width: 900px;
+  margin: 18px auto 0;
+}
+
+.video-wrap video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  background: #000;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ===== Feedback page ===== */
+.feedback-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+@media (max-width: 900px) {
+  .feedback-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feedback-list {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.6;
+}
+
+.reply-box {
+  margin-top: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.reply-box textarea {
+  width: 100%;
+  min-height: 110px;
+  resize: vertical;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #000;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.reply-box button {
+  width: fit-content;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #04AA6D;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.reply-box button:hover {
+  background-color: #038757;
+}
+
+.success-msg {
+  margin: 0;
+  color: #04AA6D;
+  font-weight: bold;
+  display: none;
+}
+
+/* ===== Uitgebreide info page ===== */
+.dev-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.dev-card {
+  background: #222;
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.badge {
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(4, 170, 109, 0.12);
+  border: 1px solid rgba(4, 170, 109, 0.25);
+}
+
+/* ===== FAQ error injection ===== */
+.faq-error {
+  margin-top: 8px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(255,0,0,0.08);
+  border: 1px solid rgba(255,0,0,0.25);
+}
+
+/* ===== Trailer positioning fix ===== */
+#video-ok {
+  max-width: 800px;      /* smaller */
+  margin: 20px auto 20px 80px; /* push to the left */
+}
+
+#trailer-video {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}

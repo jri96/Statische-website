@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <ul class="navbar">
+            <li class="dropdown"><a href="home.html" class="dropbtn">HOME</a></li>
+            <li class="dropdown"><a href="media.html" class="dropbtn">Mediapagina/galerij</a></li>
+            <li class="dropdown"><a href="faq.html" class="dropbtn">FAQ</a></li>
+            <li class="dropdown"><a href="info.html" class="dropbtn">informatie pagina</a></li>
+            <li class="dropdown"><a href="uitgebreide-info.html" class="dropbtn">uitgebreid-info</a></li>
+            <li class="dropdown"><a href="feedback.html" class="dropbtn">feedback</a></li>
+        </ul class="navbar">
+    </header>
+
+     <section id="faq" class="faq-section">
+        <h1>FAQ</h1>
+        <p>Hier vind je veelgestelde vragen over het mediaproduct.</p>
+
+         <div class="faq-list">
+            <details>
+                <summary>Wat is dit mediaproduct?</summary>
+                <p>Dit is een promotiewebsite voor het mediaproduct gebaseerd op Hollow Knight Silksong.</p>
+            </details>
+
+             <details>
+                <summary>Waar kan ik de trailer bekijken?</summary>
+                <p>Op de homepagina staat de trailer bovenaan de pagina.</p>
+            </details>
+             <details>
+                <summary>Op welke apparaten werkt de website?</summary>
+                <p>De website is gemaakt voor desktop en laptop. Later kan er een mobiele versie worden toegevoegd.</p>
+            </details>
+        </div>
+        <h2>Vraag stellen</h2>
+        <p>Staat jouw vraag er niet bij? Vul dan het formulier hieronder in.</p>
+        <form id="vraag-formulier" class="faq-form">
+            <div class="form-group">
+                <label for="naam">Naam</label>
+                <input type="text" id="naam" name="naam" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mailadres</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="onderwerp">Onderwerp</label>
+                <input type="text" id="onderwerp" name="onderwerp" required>
+            </div>
+            <div class="form-group">
+                <label for="vraag">Je vraag</label>
+                <textarea id="vraag" name="vraag" rows="4" required></textarea>
+            </div>
+            <button type="submit">Verstuur vraag</button>
+            <p id="form-bericht" class="form-bericht" aria-live="polite"></p>
+            </form>
+    </section>
+
+    <h2>Ingestuurde vragen</h2>
+<ul id="submitted-questions" class="info-list"></ul>
+
+    <section class="faq-section">
+  <h1>FAQ</h1>
+  <div class="faq-list">
+    <details>
+      <summary>Vraag 1</summary>
+      <p>Antwoord 1...</p>
+    </details>
+
+    <details>
+      <summary>Vraag 2</summary>
+      <p>Antwoord 2...</p>
+    </details>
+  </div>
+</section>
+
+    <script src="app.js"></script>
+</body>
+</html>
+   
+   
+  

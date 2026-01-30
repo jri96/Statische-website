@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media / galerij</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <ul class="navbar">
+        <li class="dropdown"><a href="home.html" class="dropbtn">HOME</a></li>
+        <li class="dropdown"><a href="media.html" class="dropbtn">Mediapagina/galerij</a></li>
+        <li class="dropdown"><a href="faq.html" class="dropbtn">FAQ</a></li>
+        <li class="dropdown"><a href="info.html" class="dropbtn">informatie pagina</a></li>
+        <li class="dropdown"><a href="uitgebreide-info.html" class="dropbtn">uitgebreid-info</a></li>
+        <li class="dropdown"><a href="feedback.html" class="dropbtn">feedback</a></li>
+    </ul class="navbar">
+</header>
+
+<section id="video-page" class="trailer">
+  <div class="trailer-container">
+    <h1>Trailer / Preview</h1>
+    <p>Bekijk hier de trailer van het mediaproduct.</p>
+
+    <!-- SUCCESS -->
+    <div id="video-ok">
+      <video id="trailer-video" controls preload="metadata">
+        <!-- change filename to your real file -->
+        <source src="video-silksong/Video school project.mp4" type="video/mp4" />
+        Je browser ondersteunt deze video niet.
+      </video>
+    </div>
+
+    <!-- ERROR (Sprint requirement) -->
+    <div id="video-fail" class="error-box" style="display:none;">
+      <strong>Deze video is momenteel niet beschikbaar.</strong>
+    </div>
+  </div>
+</section>
+
+<section class="media-section">
+    <h1>Galerij</h1>
+
+    <div class="download-bar">
+        <button id="download-all" type="button">Download alle afbeeldingen</button>
+        <p id="download-msg" class="download-msg" aria-live="polite"></p>
+    </div>
+
+    <p>Bekijk hier afbeeldingen van het mediaproduct.</p>
+
+    <div class="gallery">
+
+        <figure class="gallery-item">
+            <img src="img/hollow knight foto1.jpg" alt="Silksong scene 1" data-title="Silksong scene 1">
+            <figcaption>Silksong scene 1</figcaption>
+            <button class="download-one" type="button" data-file="img/hollow knight foto1.jpg">Download</button>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="img/hollow knight foto2.jpg" alt="Silksong scene 2" data-title="Silksong scene 2">
+            <figcaption>Silksong scene 2</figcaption>
+            <button class="download-one" type="button" data-file="img/hollow knight foto2.jpg">Download</button>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="img/hollow knight foto3.jpg" alt="Silksong scene 3" data-title="Silksong scene 3">
+            <figcaption>Silksong scene 3</figcaption>
+            <button class="download-one" type="button" data-file="img/hollow knight foto3.jpg">Download</button>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="img/silksong_img4.png" alt="Silksong scene 4" data-title="Silksong scene 4">
+            <figcaption>Silksong scene 4</figcaption>
+            <button class="download-one" type="button" data-file="img/silksong_img4.png">Download</button>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="img/silksong_img5.png" alt="Silksong scene 5" data-title="Silksong scene 5">
+            <figcaption>Silksong scene 5</figcaption>
+            <button class="download-one" type="button" data-file="img/silksong_img5.png">Download</button>
+        </figure>
+
+        <figure class="gallery-item">
+            <img src="img/bestaat_niet.png" alt="Onbekende afbeelding" data-title="Onbekende afbeelding">
+            <figcaption>Onbekende afbeelding</figcaption>
+            <button class="download-one" type="button" data-file="img/bestaat_niet.png">Download</button>
+        </figure>
+    </div>
+</section>
+<div id="image-modal" class="image-modal">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modal-image">
+    <p id="modal-caption"></p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="app.js"></script>
+   
+</body>
+</html>
