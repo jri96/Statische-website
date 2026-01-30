@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nl" data-page="gallery">
+<head>
+    <meta charset="UTF-8">
+    <title>Silksong – Galerij</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">HOLLOW KNIGHT <span>SILKSONG</span></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Galerij</a>
+            <a href="info.html">Algemene info</a>
+            <a href="dev-info.html">Uitgebreide info</a>
+            <a href="faq.html">FAQ</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <section id="gallery-content" class="section-box">
+        <h1>Galerij</h1>
+        <p>Bekijk exclusieve beelden uit Hollow Knight: Silksong.</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="../img/lz1.jpg"><button class="download-btn">Download</button></div>
+            <div class="gallery-item"><img src="../img/lz2.jpg"><button class="download-btn">Download</button></div>
+            <div class="gallery-item"><img src="../img/lz3.jpg"><button class="download-btn">Download</button></div>
+            <div class="gallery-item"><img src="../img/lz4.jpg"><button class="download-btn">Download</button></div>
+            <div class="gallery-item"><img src="../img/lz5.jpg"><button class="download-btn">Download</button></div>
+            <div class="gallery-item"><img src="../img/lz6.jpg"><button class="download-btn">Download</button></div>
+        </div>
+
+        <p id="download-message"></p>
+
+        <h2>Gameplay Preview</h2>
+
+        <div class="video-wrapper" style="position: relative;">
+            
+            <!-- FOUT OVERLAY -->
+            <div id="video-error-overlay" class="video-error-overlay" hidden>
+                <p>Deze video kan niet worden weergegeven.</p>
+            </div>
+
+            <!-- VIDEO -->
+            <video id="gallery-video" controls>
+                <source src="../img/videoplayback.mp4" type="video/mp4">
+            </video>
+
+            <p id="gallery-video-error" hidden></p>
+        </div>
+
+    </section>
+
+    <section id="gallery-placeholder" class="section-box" hidden>
+        <h1>Galerij niet beschikbaar</h1>
+        <p>De afbeeldingen konden niet worden geladen.</p>
+
+        <div class="gallery-grid">
+            <div class="placeholder-box"></div>
+            <div class="placeholder-box"></div>
+            <div class="placeholder-box"></div>
+            <div class="placeholder-box"></div>
+            <div class="placeholder-box"></div>
+            <div class="placeholder-box"></div>
+        </div>
+    </section>
+
+</main>
+
+<script src="../app/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="nl" data-page="faq">
+<head>
+    <meta charset="UTF-8">
+    <title>Silksong – FAQ</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">HOLLOW KNIGHT <span>SILKSONG</span></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Galerij</a>
+            <a href="info.html">Algemene info</a>
+            <a href="dev-info.html">Uitgebreide info</a>
+            <a href="faq.html">FAQ</a>
+            <a href="feedback.html">Feedback</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <section class="section-box">
+        <h1>FAQ</h1>
+        <p>Veelgestelde vragen over Hollow Knight: Silksong.</p>
+
+        <div id="faq-list">
+
+            <details>
+                <summary>Wat is Hollow Knight: Silksong?</summary>
+                <p>Silksong is het vervolg op Hollow Knight, waarin je speelt als Hornet.</p>
+            </details>
+
+            <details>
+                <summary>Wanneer komt Silksong uit?</summary>
+                <p>Er is nog geen officiële releasedatum bekendgemaakt.</p>
+            </details>
+
+            <details data-load="error">
+                <summary>Op welke platformen verschijnt Silksong?</summary>
+            </details>
+
+        </div>
+    </section>
+
+    <section id="faq-content" class="section-box">
+        <h2>Vraag stellen</h2>
+        <p>Staat jouw vraag er niet bij? Stel je vraag via het formulier.</p>
+
+        <form id="vraag-formulier">
+
+            <div>
+                <label for="naam">Naam</label>
+                <input type="text" id="naam" required>
+            </div>
+
+            <div>
+                <label for="email">E-mailadres</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div>
+                <label for="onderwerp">Onderwerp</label>
+                <input type="text" id="onderwerp" required>
+            </div>
+
+            <div>
+                <label for="vraag">Je vraag</label>
+                <textarea id="vraag" rows="4" required></textarea>
+            </div>
+
+            <button type="submit">Versturen</button>
+            <p id="form-bericht"></p>
+
+        </form>
+    </section>
+
+    <section id="faq-form-error" class="section-box" hidden>
+        <p class="error-message">
+            Het vraagformulier kan momenteel niet worden geladen. Probeer het later opnieuw.
+        </p>
+    </section>
+
+</main>
+
+<script src="../app/app.js"></script>
+</body>
+</html>
